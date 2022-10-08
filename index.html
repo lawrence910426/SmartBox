@@ -1,29 +1,41 @@
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <button>Click me to share</button>
+<!DOCTYPE html>
+<html lang="en">
 
-    <script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>SmartBoxQrCode</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Centered-Brand-icons.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
 
-const shareData = {
-  title: 'MDN',
-  text: 'Learn web development on MDN!',
-  url: 'https://developer.mozilla.org'
-}
+<body>
+    <nav class="navbar navbar-light navbar-expand-md py-3">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"><img src="assets/img/有人.png" style="max-width: 4rem;max-height: 4rem;margin-left: 1rem;"></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-4"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse flex-grow-0 order-md-first" id="navcol-4">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">智慧校園二手買賣平台</a></li>
+                    <li class="nav-item"></li>
+                </ul>
+                <div class="d-md-none my-2"><button class="btn btn-light me-2" type="button">Button</button><button class="btn btn-primary" type="button">Button</button></div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center" style="font-size: 1.5rem;">點擊下方按鈕以分享你的櫃位</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 d-flex d-lg-flex justify-content-center justify-content-lg-center"><img id="share_btn" style="min-height: 15rem;min-width: 15rem;max-width: 15rem;max-height: 15rem;" src="assets/img/有人.png" role="button"></div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/share.js"></script>
+</body>
 
-const btn = document.querySelector('button');
-// Share must be triggered by "user activation"
-btn.addEventListener('click', async () => {
-  try { 
-    await navigator.share(shareData);
-  } catch (err) {
-    alert(err)
-  }
-});
-
-    </script>
-  </body>
 </html>
