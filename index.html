@@ -4,6 +4,26 @@
     <title>This is the title of the webpage!</title>
   </head>
   <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+    <button>Click me to share</button>
+
+    <script>
+
+const shareData = {
+  title: 'MDN',
+  text: 'Learn web development on MDN!',
+  url: 'https://developer.mozilla.org'
+}
+
+const btn = document.querySelector('button');
+// Share must be triggered by "user activation"
+btn.addEventListener('click', async () => {
+  try { 
+    await navigator.share(shareData);
+  } catch (err) {
+    alert(err)
+  }
+});
+
+    </script>
   </body>
 </html>
